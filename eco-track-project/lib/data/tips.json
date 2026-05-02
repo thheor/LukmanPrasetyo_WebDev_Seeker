@@ -1,0 +1,44 @@
+{
+  "safe": [
+    {
+      "impact": "Your current emissions are low enough for local ecosystems to naturally absorb.",
+      "action": "Maintain these habits by walking or cycling for short trips instead of using motorized vehicles."
+    },
+    {
+      "impact": "Low energy consumption reduces the immediate strain on regional power grids.",
+      "action": "Continue using natural ventilation or fans when possible to keep AC usage at a minimum."
+    },
+    {
+      "impact": "Your current lifestyle contributes to a stable and cooler global climate.",
+      "action": "Keep your laptop in Power Saver mode to reduce charging frequency"
+    }
+  ],
+  "warning": [
+    {
+      "impact": "This level of emission contributes to a gradual rise in local temperatures.",
+      "action": "Try carpooling or switching from a car to a motorcycle to cut your transportation emissions by 50%."
+    },
+    {
+      "impact": "Increased energy demand for AC units forces power plants to release more carbon.",
+      "action": "Set your AC to 24°C to reduce heavy compressor energy consumption."
+    },
+    {
+      "impact": "This level of output starts to outpace natural carbon absorption rates.",
+      "action": "Limit laptop use or switch to power-saving modes during idle times."
+    }
+  ],
+  "danger": [
+    {
+      "impact": "High emissions directly contribute to rapid global warming and extreme weather.",
+      "action": "Reduce private vehicle use, switch to electric, or use public transit."
+    },
+    {
+      "impact": "Poor air quality increases respiratory health risks for your local community.",
+      "action": "Use fans instead of AC and optimize home insulation for cooling."
+    },
+    {
+      "impact": "Excessive energy demand accelerates the depletion of vital natural resources.",
+      "action": "Minimize daily screen time and unplug all electronics while you sleep."
+    }
+  ]
+}

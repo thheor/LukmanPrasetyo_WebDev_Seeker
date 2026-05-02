@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eco Tracker App</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-inter bg-light-beige">
+    <header class="w-screen flex justify-center items-center">
+      {{navbar}}
+    </header>
+    <main class="grid grid-cols-12 grid-rows-5 w-screen">
+      <section id="home" class="row-start-1 col-start-2 col-span-10 h-screen">
+        <hero-element class="">{{hero}}</hero-element>
+      </section>
+      <section id="impact" class="row-start-2 col-start-2 col-span-10 h-screen">
+        <impact-element>{{impact}}</impact-element>
+      </section>
+      <section
+        id="solutions"
+        class="row-start-3 col-start-2 col-span-10 h-screen"
+      >
+        <how-it-works>{{how-it-works}}</how-it-works>
+      </section>
+      <section id="about" class="row-start-4 col-start-2 col-span-10 h-screen">
+        <about-element>{{about}}</about-element>
+      </section>
+      <section id="start-now" class="row-start-5 col-start-2 col-span-10">
+        <start-now-element>{{start-now}}</start-now-element>
+      </section>
+    </main>
+    <footer>{{footer}}</footer>
+  </body>
+  <script type="module" src="./main.js"></script>
+</html>

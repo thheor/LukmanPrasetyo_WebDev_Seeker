@@ -1,0 +1,122 @@
+<nav
+  id="navbar"
+  class="block fixed left-1/2 -translate-x-1/2 top-5 px-4 py-3 bg-light-beige/10 shadow-md rounded-xl w-[90%] backdrop-blur-lg z-10"
+>
+  <div
+    class="relative flex max-sm:flex-col sm:justify-between items-end sm:items-center mx-auto"
+  >
+    <a
+      href="/"
+      class="absolute h-fit max-sm:inset-x-0 max-sm:my-auto sm:static w-fit text-2xl font-inter font-bold text-dark-green"
+      >Eco-Track</a
+    >
+    <button
+      type="button"
+      id="navbar-button"
+      class="sm:hidden cursor-pointer mr-1"
+    >
+      <span id="navbar-list-icon" class=""
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#546b41"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-text-align-justify-icon lucide-text-align-justify"
+        >
+          <path d="M3 5h18" />
+          <path d="M3 12h18" />
+          <path d="M3 19h18" /></svg
+      ></span>
+      <span id="navbar-close-icon" class="hidden"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#546b41"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-x-icon lucide-x"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" /></svg
+      ></span>
+    </button>
+    <div
+      id="navbar-list"
+      class="hidden md:block max-sm:mt-5 max-sm:w-full border-t-darkest-green"
+    >
+      <ul
+        class="flex max-sm:flex-col sm:items-center gap-2 sm:gap-5 text-Black"
+      >
+        <li>
+          <a
+            href="/#home"
+            class="nav-link text-xl sm:text-base font-inter font-normal hover:text-dark-green after:block after:content-[''] after:border-b after:scale-x-0 after:transition hover:after:scale-x-100 transition duration-250 ease-in-out"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/#impact"
+            class="nav-link text-xl sm:text-base font-inter font-normal hover:text-dark-green after:block after:content-[''] after:border-b after:scale-x-0 after:transition hover:after:scale-x-100 transition duration-250 ease-in-out"
+            >Impact</a
+          >
+        </li>
+        <li>
+          <a
+            href="/#solutions"
+            class="nav-link text-xl sm:text-base font-inter font-normal hover:text-dark-green after:block after:content-[''] after:border-b after:scale-x-0 after:transition hover:after:scale-x-100 transition duration-250 ease-in-out"
+            >Solutions</a
+          >
+        </li>
+        <li>
+          <a
+            href="/#about"
+            class="nav-link text-xl sm:text-base font-inter font-normal hover:text-dark-green after:block after:content-[''] after:border-b after:scale-x-0 after:transition hover:after:scale-x-100 transition duration-250 ease-in-out"
+            >About</a
+          >
+        </li>
+        <div class="sm:hidden flex flex-col gap-2">
+          <li>
+            <a
+              href="/login"
+              class="nav-link text-xl sm:text-base font-inter font-normal hover:text-dark-green after:block after:content-[''] after:border-b after:scale-x-0 after:transition hover:after:scale-x-100 transition duration-250 ease-in-out"
+            >
+              Login
+            </a>
+          </li>
+          <li>
+            <a
+              href="/signup"
+              class="nav-link text-xl sm:text-base font-inter font-normal hover:text-dark-green after:block after:content-[''] after:border-b after:scale-x-0 after:transition hover:after:scale-x-100 transition duration-250 ease-in-out"
+            >
+              Get Started
+            </a>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <div class="max-sm:hidden flex gap-2">
+      <a
+        href="/login"
+        class="font-normal text-base px-4 py-1 rounded-xl bg-light-beige/80 text-dark-green hover:bg-light-green/80 hover:text-light-beige transition duration-150 ease-in-out cursor-pointer"
+      >
+        Login
+      </a>
+      <a
+        href="/signup"
+        class="font-normal text-base px-4 py-1 text-light-beige bg-light-green hover:bg-dark-green/80 transition duration-150 ease-in-out rounded-xl cursor-pointer"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</nav>
