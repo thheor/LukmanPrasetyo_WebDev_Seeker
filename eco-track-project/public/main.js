@@ -3,6 +3,7 @@ const submitButton = document.querySelector("#submit-button");
 const resetButton = document.querySelector("#reset-button");
 const resultElement = document.querySelector("#result");
 const resultBar = document.querySelector("#result-bar");
+const sections = document.querySelectorAll("section[id]");
 const navbarButton = document.querySelector("#navbar-button");
 const navbarList = document.querySelector("#navbar-list");
 const navbarListIcon = document.querySelector("#navbar-list-icon");
@@ -27,7 +28,7 @@ const debouncing = (func, delay) => {
 
 const strictParse = (value) => {
   const convertedValue = Number(value);
-  if (typeof convertedValue !== "number" || value === "") {
+  if (value === "" || isNaN(convertedValue)) {
     return null;
   }
 
@@ -142,9 +143,12 @@ const postData = async (data) => {
       }),
     });
 
-    return response.json();
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    return await response.json();
   } catch (error) {
     window.alert("Error while sending data");
+    return { success: false };
   }
 };
 
@@ -162,36 +166,48 @@ if (currentPath.includes("/calculator")) {
   });
 }
 
+const activeLinkStyles = ["text-dark-green", "after:scale-x-100"];
+
+const activeLink = (id) => {
+  navbarLinks.forEach((link) => {
+    const isMatch = link.getAttribute("href") === `/#${id}`;
+    activeLinkStyles.forEach((cls) => link.classList.toggle(cls, isMatch));
+  });
+};
+
+const navbarObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        activeLink(entry.target.id);
+      }
+    });
+  },
+  { rootMargin: "-20% 0px -70% 0px", threshold: 0 },
+);
+
+const animationObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0");
+        entry.target.classList.add("opacity-100");
+        animationObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { rootMargin: "-20% 0px -70% 0px", threshold: 0 },
+);
+
+sections.forEach((section) => {
+  navbarObserver.observe(section);
+  animationObserver.observe(section);
+});
+
 navbarButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   navbarListIcon.classList.toggle("hidden");
   navbarCloseIcon.classList.toggle("hidden");
   navbarList.classList.toggle("hidden");
-});
-
-navbarLinks.forEach((item) => {
-  item.addEventListener("click", () => {
-    const history = "/" + window.location.hash;
-    window.location.hash = item.getAttribute("href");
-    const currentHash = window.location.hash.replace("#", "");
-
-    navbarLinks.forEach((navlink) => {
-      if (navlink.getAttribute("href") === history) {
-        navlink.classList.remove(
-          "after:scale-x-100",
-          "text-dark-green",
-          "after:border-dark-green",
-        );
-      }
-    });
-
-    if (item.getAttribute("href") === currentHash) {
-      item.classList.add(
-        "after:scale-x-100",
-        "text-dark-green",
-        "after:border-dark-green",
-      );
-    }
-  });
 });

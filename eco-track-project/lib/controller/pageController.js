@@ -14,16 +14,16 @@ export const mainPage = (req, res) => {
       directory: join(staticDirectory, "ui", "main", "hero.html"),
     },
     {
-      name: "impact",
-      directory: join(staticDirectory, "ui", "main", "impact.html"),
+      name: "why-track",
+      directory: join(staticDirectory, "ui", "main", "why-track.html"),
     },
     {
       name: "how-it-works",
       directory: join(staticDirectory, "ui", "main", "how-it-works.html"),
     },
     {
-      name: "about",
-      directory: join(staticDirectory, "ui", "main", "about.html"),
+      name: "impact",
+      directory: join(staticDirectory, "ui", "main", "impact.html"),
     },
     {
       name: "start-now",

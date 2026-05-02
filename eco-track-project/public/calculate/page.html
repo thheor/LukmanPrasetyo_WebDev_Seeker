@@ -9,32 +9,35 @@
   </head>
   <body class="bg-light-beige">
     <header>{{navbar}}</header>
-    <main
-      class="sm:grid grid-cols-12 grid-rows-12 flex flex-col max-sm:items-center gap-2 sm:gap-5 w-screen sm:h-screen"
-    >
-      <div
-        class="col-start-2 row-start-3 row-span-2 col-span-10 max-sm:w-[90%] max-sm:mt-20"
+    <main>
+      <section
+        id="calculator"
+        class="sm:grid grid-cols-12 grid-rows-12 flex flex-col max-sm:items-center gap-2 sm:gap-5 opacity-0 transition-all duration-500 ease-in w-screen sm:h-screen"
       >
-        <h1
-          class="text-2xl sm:text-5xl font-bold font-inter text-darkest-green"
+        <div
+          class="col-start-2 row-start-3 row-span-2 col-span-10 max-sm:w-[90%] max-sm:mt-20"
         >
-          Carbon Calculator
-        </h1>
-        <p
-          class="font-inter text-base sm:text-lg font-light text-Black sm:w-180 mt-2"
-        >
-          Measure your daily footprint and take actionable steps toward
-          environmental stewardship. Every small change contributes to a
-          healthier planet.
-        </p>
-      </div>
-      {{form}}
+          <h1
+            class="text-2xl sm:text-5xl font-bold font-inter text-darkest-green"
+          >
+            Carbon Calculator
+          </h1>
+          <p
+            class="font-inter text-base sm:text-lg font-light text-Black sm:w-180 mt-2"
+          >
+            Measure your daily footprint and take actionable steps toward
+            environmental stewardship. Every small change contributes to a
+            healthier planet.
+          </p>
+        </div>
+        {{form}}
 
-      <!-- RESULT -->
-      {{result}}
+        <!-- RESULT -->
+        {{result}}
 
-      <!-- TIPS -->
-      {{tips}}
+        <!-- TIPS -->
+        {{tips}}
+      </section>
     </main>
     <footer class="mt-20">{{footer}}</footer>
     <script src="../main.js" type="module"></script>

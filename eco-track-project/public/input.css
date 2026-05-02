@@ -15,4 +15,10 @@
   --color-White: #fbf6f6;
   --color-Red: #cf0f0f;
   --color-Yellow: #ffde42;
+
+  @layer components {
+    .fade-in {
+      opacity: 1;
+    }
+  }
 }
