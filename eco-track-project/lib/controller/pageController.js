@@ -1,8 +1,9 @@
 import { join } from "path";
 import { PageTemplates } from "../models/PageTemplates.js";
 
-const { mainFile, calculator, notFound, staticDirectory } = pageDirectory();
 const page = new PageTemplates();
+const { mainFile, calculator, notFound, staticDirectory } =
+  page.pageDirectory();
 
 export const mainPage = (req, res) => {
   const components = [

@@ -5,14 +5,14 @@ export class PageTemplates {
   pageDirectory() {
     const root = process.cwd();
     const staticDirectory = join(root, "public");
-    const mainFile = join(this.staticDirectory, "index.html");
-    const notFound = join(this.staticDirectory, "ui", "404.html");
-    const calculator = join(this.staticDirectory, "calculate", "page.html");
+    const mainFile = join(staticDirectory, "index.html");
+    const notFound = join(staticDirectory, "ui", "404.html");
+    const calculator = join(staticDirectory, "calculate", "page.html");
 
     return { mainFile, calculator, notFound, staticDirectory, root };
   }
 
-  renderPage() {
+  renderPage({ page, components }) {
     let layout = readFileSync(page, "utf-8");
 
     components.forEach((element) => {
