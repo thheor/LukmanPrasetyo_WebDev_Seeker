@@ -2,6 +2,7 @@ import { ApiService } from "./models/ApiService.js";
 import { Calculator } from "./models/Caculator.js";
 import { Observer } from "./models/Observer.js";
 
+const navbar = document.querySelector("#navbar");
 const navbarButton = document.querySelector("#navbar-button");
 const navbarList = document.querySelector("#navbar-list");
 
@@ -20,6 +21,24 @@ const debouncing = (func, delay) => {
     }, delay);
   };
 };
+
+let lastScrollTop = 0;
+window.addEventListener(
+  "scroll",
+  () => {
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (st > lastScrollTop) {
+      console.log("scrolling down");
+      navbar.classList.add("opacity-0");
+    } else {
+      console.log("scrolling up");
+      navbar.classList.remove("opacity-0");
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+  },
+  false,
+);
 
 navbarButton.addEventListener("click", (e) => {
   e.preventDefault();
