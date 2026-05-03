@@ -21,7 +21,7 @@ export const validateRequest = () => {
     ];
 
     fields.forEach(({ key, label, max }) => {
-      const value = data[key];
+      const value = strictParse(data[key]);
 
       if (value === undefined || value === null) {
         errors[key] = `Enter a valid ${label}.`;
@@ -51,4 +51,13 @@ export const validateRequest = () => {
 
     next();
   };
+};
+
+const strictParse = (value) => {
+  const convertedValue = Number(value);
+  if (value === "" || isNaN(convertedValue)) {
+    return null;
+  }
+
+  return convertedValue;
 };

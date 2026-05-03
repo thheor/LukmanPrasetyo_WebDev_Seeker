@@ -1,7 +1,8 @@
 import { join } from "path";
-import { renderPage, pageDirectory } from "../utils/pageTemplates.js";
+import { PageTemplates } from "../models/PageTemplates.js";
 
 const { mainFile, calculator, notFound, staticDirectory } = pageDirectory();
+const page = new PageTemplates();
 
 export const mainPage = (req, res) => {
   const components = [
@@ -35,9 +36,9 @@ export const mainPage = (req, res) => {
     },
   ];
 
-  const page = renderPage({ page: mainFile, components: components });
+  const htmlPage = page.renderPage({ page: mainFile, components: components });
 
-  res.status(200).send(page);
+  res.status(200).send(htmlPage);
 };
 
 export const calculatorPage = (req, res) => {
@@ -63,9 +64,12 @@ export const calculatorPage = (req, res) => {
       directory: join(staticDirectory, "ui", "footer.html"),
     },
   ];
-  const page = renderPage({ page: calculator, components: components });
+  const htmlPage = page.renderPage({
+    page: calculator,
+    components: components,
+  });
 
-  res.status(200).send(page);
+  res.status(200).send(htmlPage);
 };
 
 export const notFoundPage = (req, res) => {
@@ -75,7 +79,7 @@ export const notFoundPage = (req, res) => {
       directory: join(staticDirectory, "ui", "navbar.html"),
     },
   ];
-  const page = renderPage({ page: notFound, components: components });
+  const htmlPage = page.renderPage({ page: notFound, components: components });
 
-  res.status(404).send(page);
+  res.status(404).send(htmlPage);
 };

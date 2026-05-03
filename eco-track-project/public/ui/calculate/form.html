@@ -1,10 +1,10 @@
 <form
   id="form"
-  class="max-sm:w-[90%] sm:col-start-2 col-span-10 sm:col-span-5 sm:row-start-5 h-fit row-span-3 sm:row-span-8 grid grid-rows-6 sm:grid-rows-7 gap-2 sm:gap-5 max-sm:h-fit"
+  class="max-sm:w-[90%] sm:col-start-2 col-span-10 sm:col-span-5 sm:row-start-5 h-fit row-span-3 sm:row-span-8 flex flex-col gap-2 sm:gap-5 max-sm:h-fit"
 >
   <!-- TRANSPORTATION -->
   <div
-    class="row-span-3 sm:row-span-4 flex justify-center items-center max-sm:h-fit bg-White border border-dark-green/20 rounded-xl"
+    class="flex justify-center items-center max-sm:h-fit bg-White border border-dark-green/20 rounded-xl"
   >
     <div class="relative flex flex-col justify-center gap-2 w-[90%] py-5">
       <legend
@@ -51,7 +51,7 @@
         />
         <p
           id="jarak-error"
-          class="hidden font-inter text-xs sm:text-sm text-Red"
+          class="hidden first-letter:uppercase font-inter text-xs sm:text-sm mt-1 text-Red"
         >
           Enter a valid positif distance.
         </p>
@@ -132,7 +132,7 @@
         </div>
         <p
           id="kendaraan-error"
-          class="hidden font-inter text-xs sm:text-sm text-Red -mt-1"
+          class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-Red -mt-1"
         >
           Enter a valid vehicle.
         </p>
@@ -140,9 +140,9 @@
     </div>
   </div>
   <!-- ENERGY USAGE -->
-  <div class="row-span-2 sm:row-start-5 sm:row-span-3">
+  <div class="">
     <div
-      class="h-full flex max-sm:py-1 justify-center items-center bg-White border border-dark-green/20 rounded-xl"
+      class="h-full flex py-5 justify-center items-center bg-White border border-dark-green/20 rounded-xl"
     >
       <div class="flex flex-col justify-center gap-2 w-[90%] h-[90%]">
         <legend
@@ -182,7 +182,7 @@
             />
             <p
               id="durasi_ac-error"
-              class="hidden font-inter text-xs sm:text-sm text-Red max-sm:mt-1"
+              class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-Red max-sm:mt-1"
             >
               Durasi AC should not be more than 24.
             </p>
@@ -203,7 +203,7 @@
             />
             <p
               id="durasi_laptop-error"
-              class="hidden font-inter text-xs sm:text-sm text-Red max-sm:mt-1"
+              class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-Red max-sm:mt-1"
             >
               Enter a valid laptop duration.
             </p>
@@ -213,7 +213,7 @@
     </div>
   </div>
   <!-- SUBMIT & RESET -->
-  <div class="sm:row-span-1 max-sm:h-fit sm:mb-5">
+  <div class="max-sm:h-fit sm:mb-5">
     <div class="flex gap-4 items-center">
       <button
         type="submit"

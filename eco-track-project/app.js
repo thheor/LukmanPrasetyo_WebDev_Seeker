@@ -2,12 +2,15 @@ import express from "express";
 import carbonRoutes from "./lib/routes/carbonRoutes.js";
 import pageRoutes from "./lib/routes/pageRoutes.js";
 import deniedPageRoutes from "./lib/routes/deniedPageRoutes.js";
-import { pageDirectory } from "./lib/utils/pageTemplates.js";
+// import { pageDirectory } from "./lib/utils/pageTemplates.js";
+import { PageTemplates } from "./lib/models/PageTemplates.js";
 
 const app = express();
 const PORT = 3000;
+const page = new PageTemplates();
+const { staticDirectory } = page.pageDirectory();
 
-const { staticDirectory } = pageDirectory();
+// const { staticDirectory } = pageDirectory();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/ui", deniedPageRoutes);
 
 app.use(express.static(staticDirectory, { index: false }));
+// app.use(express.static(page.staticDirectory), { index: false });
 
 app.use("/carbon", carbonRoutes);
 
