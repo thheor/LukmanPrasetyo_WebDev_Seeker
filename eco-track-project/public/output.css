@@ -618,6 +618,12 @@
   .bg-sage {
     background-color: var(--color-sage);
   }
+  .bg-scarlet\/20 {
+    background-color: color-mix(in srgb, #cf0f0f 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-scarlet) 20%, transparent);
+    }
+  }
   .bg-radial {
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
@@ -776,14 +782,32 @@
   .text-deep-forest {
     color: var(--color-deep-forest);
   }
+  .text-deep-forest\/80 {
+    color: color-mix(in srgb, #40513b 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-deep-forest) 80%, transparent);
+    }
+  }
   .text-frost {
     color: var(--color-frost);
   }
   .text-moss {
     color: var(--color-moss);
   }
+  .text-moss\/80 {
+    color: color-mix(in srgb, #546b41 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-moss) 80%, transparent);
+    }
+  }
   .text-obsidian {
     color: var(--color-obsidian);
+  }
+  .text-obsidian\/80 {
+    color: color-mix(in srgb, #1b211a 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-obsidian) 80%, transparent);
+    }
   }
   .text-red-700 {
     color: var(--color-red-700);
@@ -849,6 +873,10 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .duration-400 {
+    --tw-duration: 400ms;
+    transition-duration: 400ms;
   }
   .duration-500 {
     --tw-duration: 500ms;
