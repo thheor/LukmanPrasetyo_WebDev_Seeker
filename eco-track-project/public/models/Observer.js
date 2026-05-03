@@ -5,7 +5,7 @@ export class Observer {
   }
 
   activeLink(id) {
-    const activeLinkStyles = ["text-dark-green", "after:scale-x-100"];
+    const activeLinkStyles = ["text-moss", "after:scale-x-100"];
 
     this.navbarLinks.forEach((link) => {
       const isMatch = link.getAttribute("href") === `/#${id}`;

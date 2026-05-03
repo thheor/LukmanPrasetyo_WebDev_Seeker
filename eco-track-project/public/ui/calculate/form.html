@@ -4,13 +4,13 @@
 >
   <!-- TRANSPORTATION -->
   <div
-    class="flex justify-center items-center max-sm:h-fit bg-White border border-dark-green/20 rounded-xl"
+    class="flex justify-center items-center max-sm:h-fit bg-frost border border-moss/20 rounded-xl"
   >
     <div class="relative flex flex-col justify-center gap-2 w-[90%] py-5">
       <legend
-        class="flex gap-2 items-center text-darkest-green text-lg sm:text-2xl font-medium"
+        class="flex gap-2 items-center text-deep-forest text-lg sm:text-2xl font-medium"
       >
-        <span class="p-1 bg-dark-green rounded">
+        <span class="p-1 bg-moss rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -47,11 +47,11 @@
           name="jarak"
           value=""
           placeholder="Enter distance"
-          class="font-inter text-lg w-full bg-light-beige px-2 py-1 border border-dark-green/20 rounded-lg focus:outline-0"
+          class="font-inter text-lg w-full bg-cream px-2 py-1 border border-moss/20 rounded-lg focus:outline-0"
         />
         <p
           id="jarak-error"
-          class="hidden first-letter:uppercase font-inter text-xs sm:text-sm mt-1 text-Red"
+          class="hidden first-letter:uppercase font-inter text-xs sm:text-sm mt-1 text-scarlet"
         >
           Enter a valid positif distance.
         </p>
@@ -69,7 +69,7 @@
           />
           <label
             for="motor"
-            class="radio-label inline-flex justify-center items-center gap-2 text-lg text-dark-green font-inter cursor-pointer w-full py-1.5 border border-dark-green/60 rounded-lg bg-light-beige peer-checked:bg-dark-green peer-checked:text-light-beige hover:bg-dark-green hover:text-light-beige transition duration-200 ease-in-out"
+            class="radio-label inline-flex justify-center items-center gap-2 text-lg text-moss font-inter cursor-pointer w-full py-1.5 border border-moss/60 rounded-lg bg-cream peer-checked:bg-moss peer-checked:text-cream hover:bg-moss hover:text-cream transition duration-200 ease-in-out"
           >
             <span
               ><svg
@@ -105,7 +105,7 @@
           />
           <label
             for="mobil"
-            class="radio-label inline-flex justify-center items-center gap-2 text-lg text-dark-green font-inter cursor-pointer w-full py-1.5 border border-dark-green/60 rounded-lg bg-light-beige peer-checked:bg-dark-green peer-checked:text-light-beige hover:bg-dark-green hover:text-light-beige transition duration-200 ease-in-out"
+            class="radio-label inline-flex justify-center items-center gap-2 text-lg text-moss font-inter cursor-pointer w-full py-1.5 border border-moss/60 rounded-lg bg-cream peer-checked:bg-moss peer-checked:text-cream hover:bg-moss hover:text-cream transition duration-200 ease-in-out"
           >
             <span
               ><svg
@@ -132,7 +132,7 @@
         </div>
         <p
           id="kendaraan-error"
-          class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-Red -mt-1"
+          class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-scarlet -mt-1"
         >
           Enter a valid vehicle.
         </p>
@@ -142,13 +142,13 @@
   <!-- ENERGY USAGE -->
   <div class="">
     <div
-      class="h-full flex py-5 justify-center items-center bg-White border border-dark-green/20 rounded-xl"
+      class="h-full flex py-5 justify-center items-center bg-frost border border-moss/20 rounded-xl"
     >
       <div class="flex flex-col justify-center gap-2 w-[90%] h-[90%]">
         <legend
-          class="flex gap-2 items-center text-darkest-green text-2xl font-medium"
+          class="flex gap-2 items-center text-deep-forest text-2xl font-medium"
         >
-          <span class="p-1 bg-darkest-green rounded"
+          <span class="p-1 bg-deep-forest rounded"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -178,11 +178,11 @@
               name="durasi_ac"
               value=""
               placeholder="0"
-              class="max-sm:place-self-end font-inter text-lg w-full bg-light-beige px-2 py-1 border border-dark-green/20 rounded-lg focus:outline-0"
+              class="max-sm:place-self-end font-inter text-lg w-full bg-cream px-2 py-1 border border-moss/20 rounded-lg focus:outline-0"
             />
             <p
               id="durasi_ac-error"
-              class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-Red max-sm:mt-1"
+              class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-scarlet max-sm:mt-1"
             >
               Durasi AC should not be more than 24.
             </p>
@@ -199,11 +199,11 @@
               name="durasi_laptop"
               value=""
               placeholder="0"
-              class="font-inter text-lg w-full bg-light-beige px-2 py-1 border border-dark-green/20 rounded-lg focus:outline-0"
+              class="font-inter text-lg w-full bg-cream px-2 py-1 border border-moss/20 rounded-lg focus:outline-0"
             />
             <p
               id="durasi_laptop-error"
-              class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-Red max-sm:mt-1"
+              class="hidden font-inter first-letter:uppercase text-xs sm:text-sm text-scarlet max-sm:mt-1"
             >
               Enter a valid laptop duration.
             </p>
@@ -218,7 +218,7 @@
       <button
         type="submit"
         id="submit-button"
-        class="inline-flex items-center justify-center px-6 py-2 text-lg font-inter font-medium border border-dark-green/80 bg-dark-green/80 text-light-beige hover:bg-dark-green hover:border-dark-green/80 rounded-full cursor-pointer"
+        class="inline-flex items-center justify-center px-6 py-2 text-lg font-inter font-medium border border-moss/80 bg-moss/80 text-cream hover:bg-moss hover:border-moss/80 rounded-full cursor-pointer"
       >
         Calculate
         <span class="ml-2"
@@ -241,7 +241,7 @@
       <button
         type="reset"
         id="reset-button"
-        class="inline-flex items-center justify-center px-6 py-2 text-lg font-inter font-medium border border-dark-green text-Black/80 hover:bg-light-green/20 rounded-full cursor-pointer"
+        class="inline-flex items-center justify-center px-6 py-2 text-lg font-inter font-medium border border-moss text-Black/80 hover:bg-sage/20 rounded-full cursor-pointer"
       >
         <span class="mr-2"
           ><svg
