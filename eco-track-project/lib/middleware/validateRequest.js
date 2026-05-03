@@ -55,8 +55,10 @@ export const validateRequest = () => {
 
 const strictParse = (value) => {
   const convertedValue = Number(value);
-  if (value === "" || isNaN(convertedValue)) {
+  if (value === "") {
     return null;
+  } else if (isNaN(convertedValue)) {
+    return NaN;
   }
 
   return convertedValue;
