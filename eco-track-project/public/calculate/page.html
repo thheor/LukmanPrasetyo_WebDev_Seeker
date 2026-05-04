@@ -9,34 +9,34 @@
   </head>
   <body class="bg-cream">
     <header>{{navbar}}</header>
-    <main>
+    <main class="sm:grid grid-cols-12 flex flex-col items-center">
       <section
         id="calculator"
-        class="sm:grid grid-cols-12 grid-rows-12 flex flex-col max-sm:items-center gap-2 sm:gap-5 opacity-0 transition-all duration-400 ease-in w-screen sm:h-screen"
+        class="col-span-10 col-start-2 flex max-sm:flex-col max-sm:items-center gap-2 sm:gap-5 opacity-0 transition-all duration-500 ease-in w-[90%] sm:w-full sm:min-h-screen"
       >
-        <div
-          class="col-start-2 row-start-3 row-span-2 col-span-10 max-sm:w-[90%] max-sm:mt-20"
-        >
+        <div class="w-full sm:w-1/2 mt-25 max-sm:mt-20">
           <h1
             class="text-2xl sm:text-5xl font-bold font-inter text-deep-forest"
           >
             Carbon Calculator
           </h1>
           <p
-            class="font-inter text-base sm:text-lg font-light text-obsidian sm:w-180 mt-2"
+            class="font-inter text-base sm:text-lg font-light text-obsidian sm:w-full mt-2"
           >
             Measure your daily footprint and take actionable steps toward
             environmental stewardship. Every small change contributes to a
             healthier planet.
           </p>
+          {{form}}
         </div>
-        {{form}}
 
         <!-- RESULT -->
-        {{result}}
+        <div class="flex sm:w-1/2 flex-col items-center gap-5 sm:mt-65">
+          <div class="w-full">{{result}}</div>
 
-        <!-- TIPS -->
-        {{tips}}
+          <!-- TIPS -->
+          <div class="w-full">{{tips}}</div>
+        </div>
       </section>
     </main>
     <footer class="mt-20">{{footer}}</footer>

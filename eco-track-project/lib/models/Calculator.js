@@ -1,4 +1,4 @@
-import tipsData from "../data/tips.json" with { type: "json" };
+import context from "../data/context.json" with { type: "json" };
 
 export class Calculator {
   static EMISSION_FACTORS = {
@@ -16,17 +16,19 @@ export class Calculator {
     const laptopEmission =
       durasi_laptop * Calculator.EMISSION_FACTORS["laptop"];
 
-    const totalEmission = vehicleEmission + acEmission + laptopEmission;
+    const totalEmission = Number(
+      (vehicleEmission + acEmission + laptopEmission).toFixed(2),
+    );
 
     return { vehicleEmission, acEmission, laptopEmission, totalEmission };
   }
 
-  getTips(data) {
+  getFeedback(data) {
     const { vehicle, ac, laptop, total } = data;
 
     let category;
-    let impact;
-    let tips;
+    const feedback = {};
+    const tips = [];
     const emissions = [vehicle, ac, laptop];
 
     if (total > 0 && total <= 2) {
@@ -41,11 +43,12 @@ export class Calculator {
 
     emissions.forEach((value, index) => {
       if (highestValue === value) {
-        impact = tipsData[category][index].impact;
-        tips = tipsData[category][index].action;
+        feedback.impact = context[category][index].impact;
       }
+      tips.push(context[category][index].action);
     });
+    feedback.tips = tips;
 
-    return { impact, tips };
+    return feedback;
   }
 }

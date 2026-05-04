@@ -7,7 +7,7 @@ export const result = async (req, res) => {
   const { vehicleEmission, acEmission, laptopEmission, totalEmission } =
     calculator.getEmission(data);
 
-  const { impact, tips } = calculator.getTips({
+  const feedback = calculator.getFeedback({
     vehicle: vehicleEmission,
     ac: acEmission,
     laptop: laptopEmission,
@@ -23,8 +23,8 @@ export const result = async (req, res) => {
       laptop: laptopEmission,
     },
     feedback: {
-      impact: impact,
-      tips: tips,
+      impact: feedback.impact,
+      tips: feedback.tips,
     },
   });
 };

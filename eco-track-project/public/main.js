@@ -29,10 +29,8 @@ window.addEventListener(
     let st = window.pageYOffset || document.documentElement.scrollTop;
 
     if (st > lastScrollTop) {
-      console.log("scrolling down");
       navbar.classList.add("opacity-0");
     } else {
-      console.log("scrolling up");
       navbar.classList.remove("opacity-0");
     }
     lastScrollTop = st <= 0 ? 0 : st;
