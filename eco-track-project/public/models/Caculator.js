@@ -22,8 +22,10 @@ export class Calculator {
   displayErrors(errors) {
     this.resultContainer.classList.add("hidden");
     this.catIcon.classList.remove("hidden");
+    this.resultHeader.textContent =
+      "Enter your details and click calculate to see your carbon footprint results.";
+    this.resultHeader.classList.remove("sm:text-3xl", "text-xl", "font-medium");
     this.breakdownContainer.classList.add("hidden");
-    console.log("errro");
     const keyErrors = Object.keys(errors);
 
     const inputs = this.form.elements;
@@ -58,9 +60,12 @@ export class Calculator {
     const radioLabels = document.querySelectorAll(".radio-label");
     radioLabels[0].classList.remove("border-scarlet");
     radioLabels[1].classList.remove("border-scarlet");
+
+    this.tipsFeedback.classList.add("hidden");
   }
 
   async displaySuccess(response) {
+    this.tipsFeedback.textContent = "";
     this.clearErrors();
     const totalEmisi = response.emisi_total;
     this.resultContainer.classList.remove("hidden");
@@ -101,13 +106,16 @@ export class Calculator {
     this.displayTips(response);
   }
 
-  resetInput = () => {
+  resetInput() {
     this.clearErrors();
-    this.feedbackList.classList.add("hidden");
     this.catIcon.classList.remove("hidden");
+
+    this.resultHeader.classList.remove("sm:text-3xl", "text-xl", "font-medium");
+    this.resultHeader.textContent =
+      "Enter your details and click calculate to see your carbon footprint results.";
     this.resultContainer.classList.add("hidden");
     this.breakdownContainer.classList.add("hidden");
-  };
+  }
 
   displayTips(response) {
     this.tipsFeedback.classList.remove("hidden");
