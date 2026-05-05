@@ -1,26 +1,70 @@
-<div class="sm:col-start-7 sm:col-span-5 sm:row-span-5 max-sm:w-[90%]">
-  <div
-    class="p-5 px-8 w-full h-full font-inter text-frost bg-deep-forest rounded-xl"
-  >
-    <h3 class="text-xl sm:text-3xl font-medium">Your Impact</h3>
-    <p class="text-lg font-normal">
-      Calculate your usage to see your environmental footprint results here.
-    </p>
-    <div class="flex justify-center items-center w-full py-11">
-      <p id="result" class="sm:text-2xl font-bold">Awaiting data...</p>
-    </div>
+<div
+  class="w-full p-8 h-full bg-frost border border-sage/20 font-inter shadow-xl rounded-xl"
+>
+  <h3 id="result-header" class="text-lg font-normal text-deep-forest">
+    Enter your details and click calculate to see your carbon footprint results.
+  </h3>
+  <div id="result-container" class="hidden">
     <div
-      id="result-container"
-      class="w-full h-4 sm:mt-5 bg-frost rounded border border-frost"
+      class="flex flex-col justify-center items-center gap-2 p-10 rounded-xl text-deep-forest"
     >
-      <div
-        id="result-bar"
-        class="h-full w-[0%] bg-frost rounded transition-all duration-300 ease-in-out"
-      ></div>
+      <p id="result" class="text-3xl sm:text-6xl tracking-wide font-bold">
+        1.72
+      </p>
+      <p>kg CO₂</p>
     </div>
-    <div class="flex justify-between mt-2 text-sm font-normal font-inter">
-      <p class="">kg CO₂</p>
-      <p>DAILY LIMIT: 15kg</p>
+    <h3 id="impact-level" class="p-2 w-full text-xl text-center rounded">
+      Impact Level: High
+    </h3>
+  </div>
+  <span id="waiting-icon" class="">
+    <img
+      src="../../assets/sleeping-cat.svg"
+      alt=""
+      id="cat-icon"
+      class="w-50 h-50 m-auto"
+    />
+  </span>
+  <div id="breakdown-container" class="hidden">
+    <div class="flex flex-col text-obsidian gap-2 mt-2">
+      <h4 class="font-normal text-xl py-2">Breakdown</h4>
+      <div class="flex justify-between">
+        <p>Vehicle Travel</p>
+        <p id="vehicle-emission">12 kg CO₂</p>
+      </div>
+      <div class="w-full h-4 bg-gray-200 rounded-lg">
+        <div
+          id="result-vehicle-bar"
+          class="h-full bg-scarlet rounded-lg transition-all duration-300 ease-in-out"
+        ></div>
+      </div>
+      <div class="flex justify-between">
+        <p>Air Conditioning</p>
+        <p id="ac-emission">12 kg CO₂</p>
+      </div>
+      <div class="w-full h-4 bg-gray-200 rounded-lg">
+        <div
+          id="result-ac-bar"
+          class="h-full bg-sage rounded-lg transition-all duration-300 ease-in-out"
+        ></div>
+      </div>
+      <div class="flex justify-between">
+        <p>Laptop Usage</p>
+        <p id="laptop-emission">12 kg CO₂</p>
+      </div>
+      <div class="w-full h-4 bg-gray-200 rounded-lg">
+        <div
+          id="result-laptop-bar"
+          class="h-full bg-amber rounded-lg transition-all duration-300 ease-in-out"
+        ></div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 p-4 bg-gray-200 rounded-lg mt-5">
+      <h3 class="text-xl font-medium">Environmental Context</h3>
+      <p id="impact">
+        This is equivalent to 145.1 km driven in a typical car, or 3 smartphones
+        charged.
+      </p>
     </div>
   </div>
 </div>

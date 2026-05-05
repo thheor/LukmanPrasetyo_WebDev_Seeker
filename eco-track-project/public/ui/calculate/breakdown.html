@@ -1,0 +1,74 @@
+<div class="rounded">
+  <table
+    class="border-collapse table-fixed w-full text-obsidian font-inter rounded"
+  >
+    <tr class="border-b border-moss bg-sage">
+      <th class="pl-2 py-2 text-left w-[15%]">Category</th>
+      <th class="py-2 text-left w-[15%]">Emission</th>
+      <th class="py-2 text-left w-[12%]">Subtotal</th>
+      <th class="py-2 text-left">Percentage</th>
+      <!-- <th class="py-2 text-left w-[30%]">Equivalent</th> -->
+    </tr>
+    <tr class="border-b border-moss/50 hover:bg-sage/20">
+      <td class="pl-2 py-2 text-base font-bold">Transport</td>
+      <td id="transport-emission" class="py-2 text-base"></td>
+      <td id="transport-subtotal" class="py-2 text-base">30 kg</td>
+      <td class="w-full flex items-center gap-1 py-2">
+        <div class="w-[70%] h-4 bg-cream border border-obsidian/30 rounded-md">
+          <div
+            id="transport-percentage-bar"
+            class="h-full bg-scarlet rounded-md"
+          ></div>
+        </div>
+        <p id="transport-percentage">50%</p>
+      </td>
+      <!-- <td id="transport-equal" class="py-2 text-base"> -->
+      <!--   460 smartphone chargers -->
+      <!-- </td> -->
+    </tr>
+    <tr class="border-b border-moss/50 hover:bg-sage/20">
+      <td class="pl-2 py-2 text-base font-bold">AC</td>
+      <td class="py-2 text-base">0.5 kg/h</td>
+      <td id="ac-subtotal" class="py-2 text-base">30 kg</td>
+      <td class="w-full flex items-center gap-1 py-2">
+        <div class="w-[70%] h-4 bg-cream border border-obsidian/30 rounded-md">
+          <div
+            id="ac-percentage-bar"
+            class="h-full bg-scarlet rounded-md"
+          ></div>
+        </div>
+        <p id="ac-percentage">50%</p>
+      </td>
+      <!-- <td id="ac-equal" class="py-2 text-base">460 smartphone chargers</td> -->
+    </tr>
+    <tr class="border-b border-moss/50 hover:bg-sage/20">
+      <td class="pl-2 py-2 text-base font-bold">Laptop</td>
+      <td class="py-2 text-base">0.05 kg/h</td>
+      <td id="laptop-subtotal" class="py-2 text-base">30 kg</td>
+      <td class="w-full flex items-center gap-1 py-2">
+        <div class="w-[70%] h-4 bg-cream border border-obsidian/30 rounded-md">
+          <div
+            id="laptop-percentage-bar"
+            class="w-[50%] h-full bg-scarlet rounded-md"
+          ></div>
+        </div>
+        <p id="laptop-percentage">50%</p>
+      </td>
+      <!-- <td id="laptop-equal" class="py-2 text-base">460 smartphone chargers</td> -->
+    </tr>
+    <tr class="border-b border-moss/50 hover:bg-sage/20">
+      <td colspan="2" class="pl-2 py-2 text-base font-bold">Total</td>
+      <td class="total-emission">8 kg</td>
+      <td class="w-full flex items-center gap-1 py-2">
+        <div class="w-[70%] h-4 bg-cream border border-obsidian/20 rounded-md">
+          <div
+            id="total-percentage"
+            class="w-[10%] h-full bg-scarlet rounded-md"
+          ></div>
+        </div>
+        <p>100%</p>
+      </td>
+      <!-- <td id="total-equal" class="py-2 text-base">460 smartphone chargers</td> -->
+    </tr>
+  </table>
+</div>

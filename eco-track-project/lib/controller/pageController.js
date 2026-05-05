@@ -61,6 +61,10 @@ export const calculatorPage = (req, res) => {
       directory: join(staticDirectory, "ui", "calculate", "tips.html"),
     },
     {
+      name: "breakdown",
+      directory: join(staticDirectory, "ui", "calculate", "breakdown.html"),
+    },
+    {
       name: "footer",
       directory: join(staticDirectory, "ui", "footer.html"),
     },
